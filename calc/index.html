@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulačka</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.min.js"></script>
+
   </head>
   <body>
-    <h1 class="result-text">vysledek je:</h1>
-    <div class="main-conteiner"> 
-      <button class="button" id="btn1">1</button>
-      <button class="button" id="btn2">2</button>
-      <button class="button" id="btn3">3</button>
-      <button class="button" id="btn4">4</button>
-      <button class="button" id="btn5">5</button>
-      <button class="button" id="btn6">6</button>
-      <button class="button" id="btn7">7</button>
-      <button class="button" id="btn8">8</button>
-      <button class="button" id="btn9">9</button>
-      <button class="button" id="btn0">0</button>
+    <h1 id="result-text">0</h1>
+    <div class="main-conteiner">
+      <button class="button" id="btn1" onclick="AddToLabel('1')">1</button>
+      <button class="button" id="btn2" onclick="AddToLabel('2')">2</button>
+      <button class="button" id="btn3" onclick="AddToLabel('3')">3</button>
+      <button class="button" id="btn-plus" onclick="AddToLabel('+')">+</button>
+      <button class="button" id="btn4" onclick="AddToLabel('4')">4</button>
+      <button class="button" id="btn5" onclick="AddToLabel('5')">5</button>
+      <button class="button" id="btn6" onclick="AddToLabel('6')">6</button>
+      <button class="button" id="btn-minus" onclick="AddToLabel('-')">-</button>
+      <button class="button" id="btn7" onclick="AddToLabel('7')">7</button>
+      <button class="button" id="btn8" onclick="AddToLabel('8')">8</button>
+      <button class="button" id="btn9" onclick="AddToLabel('9')">9</button>
+      <button class="button" id="btn-times" onclick="AddToLabel('*')">x</button>
+      <button class="button" id="btn0" onclick="AddToLabel('0')">0</button>
+      <button class="button" id="btn-del">C</button>
+      <button class="button" id="btn-equal" onclick="Eval()">=</button>
+      <button class="button" id="btn-divide" onclick="AddToLabel('/')">:</button>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
